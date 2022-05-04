@@ -1,0 +1,35 @@
+{
+  "Routes": [
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/airline/Register/",
+      "DownstreamScheme": "http",
+      "ServiceName": "RegisterService",
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/Register/",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/airline/Register/",
+      "DownstreamScheme": "http",
+      "ServiceName": "RegisterService",
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/airline/Register/",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/Admin/",
+      "DownstreamScheme": "http",
+      "ServiceName": "AdminService",
+      "UpstreamPathTemplate": "/api/gatway/v1.0/flight/Admin/",
+      "UpstreamHttpMethod": [ "Post" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": "8500",
+      "Type": "Consul"
+    }
+  }
+}
